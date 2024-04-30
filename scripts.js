@@ -186,11 +186,15 @@ function submitData() {
 
     console.log(name.value + " " + desc.value)
 
-    add(name.value, desc.value)
-    var popUp = document.getElementById("form")
-    popUp.style.display = "none"
-    name.value = ""
-    desc.value = ""
+    if (name.value && desc.value) {
+        add(name.value, desc.value)
+        var popUp = document.getElementById("form")
+        popUp.style.display = "none"
+        name.value = ""
+        desc.value = ""
+    } else { console.log("nothing entered") }
+
+
 
 
 }
