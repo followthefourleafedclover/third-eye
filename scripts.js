@@ -193,10 +193,11 @@ function submitData() {
         name.value = ""
         desc.value = ""
     } else { console.log("nothing entered") }
+}
 
-
-
-
+function cancel() {
+    const pop = document.getElementById("form")
+    pop.style.display = "none"
 }
 
 var button = document.getElementById("add")
@@ -204,6 +205,9 @@ button.addEventListener('click', addButton)
 
 var subBtn = document.getElementById('submit-btn')
 subBtn.addEventListener('click', submitData)
+
+var cancelBtn = document.getElementById('cancel-btn')
+cancelBtn.addEventListener('click', cancel)
 
 function connect() {
     let opacity = 1;
